@@ -1,0 +1,7 @@
+test:
+    name: basic-contract-benchmark
+    description: test benchmark
+    workers:
+      type: local
+      number: 1
+    rounds:

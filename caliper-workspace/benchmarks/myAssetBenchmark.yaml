@@ -1,0 +1,28 @@
+test:
+
+    name: basic-contract-benchmark
+
+    description: test benchmark
+
+    workers:
+
+      type: local
+
+      number: 1
+
+    rounds:
+
+
+      - label: createAsset_100tps
+        description: Write asset benchmark
+        txNumber: 100
+        rateControl: 
+          type: ./assignRC.js
+          opts:
+            tps: 100
+        workload:
+          module: workload/createAsset.js
+          arguments:
+            assets: 10
+            contractId: basic
+        
